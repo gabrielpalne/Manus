@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 15px;
+        }
+        .continuous-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center p-8">
+        <div class="content-card p-10 max-w-6xl w-full">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-chart-line text-orange-600 mr-3"></i>
+                    Etapa 4: Monitoramento e Otimização
+                </h1>
+                <p class="text-lg text-gray-600">Aferir resultados e promover melhoria contínua</p>
+                <span class="continuous-badge">Processo Contínuo</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Atividades de Monitoramento -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-eye text-orange-500 mr-2"></i>
+                        Monitoramento Contínuo
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="metric-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-dollar-sign text-green-600 mr-2"></i>
+                                Aferição de ROI
+                            </h3>
+                            <p class="text-sm text-gray-600">Cálculo rigoroso de retorno sobre investimento</p>
+                        </div>
+                        
+                        <div class="metric-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-tachometer-alt text-blue-600 mr-2"></i>
+                                Performance Técnica
+                            </h3>
+                            <p class="text-sm text-gray-600">Precisão, latência e disponibilidade dos modelos</p>
+                        </div>
+                        
+                        <div class="metric-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-users text-purple-600 mr-2"></i>
+                                Adoção e Satisfação
+                            </h3>
+                            <p class="text-sm text-gray-600">Taxa de uso e feedback dos usuários</p>
+                        </div>
+                        
+                        <div class="metric-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>
+                                Detecção de Anomalias
+                            </h3>
+                            <p class="text-sm text-gray-600">Drift de dados e degradação de modelos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Melhoria Contínua -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-sync-alt text-green-500 mr-2"></i>
+                        Melhoria Contínua
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded">
+                            <h3 class="font-semibold text-green-800 mb-2">
+                                <i class="fas fa-redo mr-2"></i>
+                                Retreinamento de Modelos
+                            </h3>
+                            <p class="text-sm text-green-700">Atualização regular com novos dados</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                            <h3 class="font-semibold text-blue-800 mb-2">
+                                <i class="fas fa-cogs mr-2"></i>
+                                Otimização de Performance
+                            </h3>
+                            <p class="text-sm text-blue-700">Melhoria de algoritmos e infraestrutura</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded">
+                            <h3 class="font-semibold text-purple-800 mb-2">
+                                <i class="fas fa-lightbulb mr-2"></i>
+                                Novos Casos de Uso
+                            </h3>
+                            <p class="text-sm text-purple-700">Expansão para novas oportunidades</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded">
+                            <h3 class="font-semibold text-orange-800 mb-2">
+                                <i class="fas fa-balance-scale mr-2"></i>
+                                Governança e Ética
+                            </h3>
+                            <p class="text-sm text-orange-700">Conformidade e uso responsável da IA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">
+                    <i class="fas fa-chart-bar text-blue-600 mr-2"></i>
+                    Dashboard de KPIs em Tempo Real
+                </h3>
+                
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="text-center bg-white rounded-lg p-4 shadow">
+                            <div class="text-2xl font-bold text-green-600">245%</div>
+                            <div class="text-sm text-gray-600">ROI de IA</div>
+                            <i class="fas fa-arrow-up text-green-500 text-xs"></i>
+                        </div>
+                        
+                        <div class="text-center bg-white rounded-lg p-4 shadow">
+                            <div class="text-2xl font-bold text-blue-600">12</div>
+                            <div class="text-sm text-gray-600">Processos Automatizados</div>
+                            <i class="fas fa-arrow-up text-green-500 text-xs"></i>
+                        </div>
+                        
+                        <div class="text-center bg-white rounded-lg p-4 shadow">
+                            <div class="text-2xl font-bold text-purple-600">850k</div>
+                            <div class="text-sm text-gray-600">Economia (R$)</div>
+                            <i class="fas fa-arrow-up text-green-500 text-xs"></i>
+                        </div>
+                        
+                        <div class="text-center bg-white rounded-lg p-4 shadow">
+                            <div class="text-2xl font-bold text-orange-600">99.8%</div>
+                            <div class="text-sm text-gray-600">Disponibilidade</div>
+                            <i class="fas fa-arrow-up text-green-500 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 grid grid-cols-3 gap-6">
+                <div class="text-center bg-orange-50 rounded-lg p-4">
+                    <i class="fas fa-infinity text-orange-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Duração</h3>
+                    <p class="text-sm text-gray-600">Contínua</p>
+                </div>
+                
+                <div class="text-center bg-green-50 rounded-lg p-4">
+                    <i class="fas fa-chart-line text-green-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Objetivo</h3>
+                    <p class="text-sm text-gray-600">Valor sustentável</p>
+                </div>
+                
+                <div class="text-center bg-blue-50 rounded-lg p-4">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Governança</h3>
+                    <p class="text-sm text-gray-600">Ética e compliance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

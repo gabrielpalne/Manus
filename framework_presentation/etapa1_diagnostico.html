@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .activity-card {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+            border-radius: 10px;
+        }
+        .tool-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center p-8">
+        <div class="content-card p-10 max-w-6xl w-full">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-search text-blue-600 mr-3"></i>
+                    Etapa 1: Diagnóstico e Estratégia
+                </h1>
+                <p class="text-lg text-gray-600">Compreender o cenário atual e definir a estratégia de transformação</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Atividades Principais -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-tasks text-blue-500 mr-2"></i>
+                        Atividades Principais
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="activity-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-clipboard-check text-blue-600 mr-2"></i>
+                                Assessment de Maturidade Digital
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-2">Avaliação estruturada em 5 dimensões críticas</p>
+                            <span class="tool-badge">Assessment Template</span>
+                        </div>
+                        
+                        <div class="activity-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-lightbulb text-blue-600 mr-2"></i>
+                                Workshop de Ideação
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-2">Identificação colaborativa de oportunidades de IA</p>
+                            <span class="tool-badge">Workshop Template</span>
+                        </div>
+                        
+                        <div class="activity-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-eye text-blue-600 mr-2"></i>
+                                Definição de Visão Estratégica
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-2">Alinhamento de objetivos e metas SMART</p>
+                            <span class="tool-badge">Canvas Estratégico</span>
+                        </div>
+                        
+                        <div class="activity-card p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-gap text-blue-600 mr-2"></i>
+                                Análise de Lacunas
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-2">Identificação de gaps entre estado atual e futuro</p>
+                            <span class="tool-badge">Gap Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Entregáveis -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-file-alt text-green-500 mr-2"></i>
+                        Entregáveis
+                    </h2>
+                    
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Relatório de Diagnóstico</span>
+                                    <p class="text-sm text-gray-600">Análise completa do cenário atual</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Assessment de Maturidade</span>
+                                    <p class="text-sm text-gray-600">Pontuação e análise por dimensão</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Catálogo de Oportunidades</span>
+                                    <p class="text-sm text-gray-600">Top 5 casos de uso priorizados</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Visão Estratégica</span>
+                                    <p class="text-sm text-gray-600">Objetivos e KPIs definidos</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold">Plano de Ação Inicial</span>
+                                    <p class="text-sm text-gray-600">Roadmap de alto nível</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 grid grid-cols-3 gap-6">
+                <div class="text-center bg-blue-50 rounded-lg p-4">
+                    <i class="fas fa-clock text-blue-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Duração</h3>
+                    <p class="text-sm text-gray-600">4-8 semanas</p>
+                </div>
+                
+                <div class="text-center bg-green-50 rounded-lg p-4">
+                    <i class="fas fa-users text-green-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Equipe</h3>
+                    <p class="text-sm text-gray-600">Consultor + Stakeholders</p>
+                </div>
+                
+                <div class="text-center bg-purple-50 rounded-lg p-4">
+                    <i class="fas fa-target text-purple-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Objetivo</h3>
+                    <p class="text-sm text-gray-600">Baseline e Estratégia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .step-card {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-left: 4px solid #10b981;
+            border-radius: 10px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: #10b981;
+            border-radius: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.25rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background: #d1fae5;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center p-8">
+        <div class="content-card p-10 max-w-6xl w-full">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-rocket text-green-600 mr-3"></i>
+                    Próximos Passos e Implementação
+                </h1>
+                <p class="text-lg text-gray-600">Roadmap para colocar o framework em prática</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Próximos Passos Imediatos -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-play text-green-500 mr-2"></i>
+                        Próximos Passos Imediatos
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="timeline-item">
+                            <div class="step-card p-4">
+                                <h3 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-flask text-blue-600 mr-2"></i>
+                                    Validação Prática
+                                </h3>
+                                <p class="text-sm text-gray-600">Aplicar framework em projeto piloto para validação</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="step-card p-4">
+                                <h3 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-graduation-cap text-purple-600 mr-2"></i>
+                                    Capacitação da Equipe
+                                </h3>
+                                <p class="text-sm text-gray-600">Treinar consultores na metodologia e ferramentas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="step-card p-4">
+                                <h3 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-cogs text-orange-600 mr-2"></i>
+                                    Refinamento de Ferramentas
+                                </h3>
+                                <p class="text-sm text-gray-600">Coletar feedback e aprimorar templates e processos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="step-card p-4">
+                                <h3 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-bullhorn text-red-600 mr-2"></i>
+                                    Marketing e Posicionamento
+                                </h3>
+                                <p class="text-sm text-gray-600">Desenvolver materiais e estratégia de go-to-market</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expansões Futuras -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-expand-arrows-alt text-blue-500 mr-2"></i>
+                        Expansões Futuras
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                            <h3 class="font-semibold text-blue-800 mb-2">
+                                <i class="fas fa-calculator mr-2"></i>
+                                Calculadora de ROI Automatizada
+                            </h3>
+                            <p class="text-sm text-blue-700">Ferramenta web para cálculo automático de ROI</p>
+                        </div>
+                        
+                        <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded">
+                            <h3 class="font-semibold text-green-800 mb-2">
+                                <i class="fas fa-industry mr-2"></i>
+                                Templates Setoriais
+                            </h3>
+                            <p class="text-sm text-green-700">Adaptações para diferentes indústrias</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded">
+                            <h3 class="font-semibold text-purple-800 mb-2">
+                                <i class="fas fa-plug mr-2"></i>
+                                Integrações Avançadas
+                            </h3>
+                            <p class="text-sm text-purple-700">Conectores com sistemas empresariais</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded">
+                            <h3 class="font-semibold text-orange-800 mb-2">
+                                <i class="fas fa-certificate mr-2"></i>
+                                Programa de Certificação
+                            </h3>
+                            <p class="text-sm text-orange-700">Certificação oficial na metodologia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">
+                    <i class="fas fa-calendar-alt text-gray-600 mr-2"></i>
+                    Cronograma de Implementação
+                </h3>
+                
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                <span class="font-bold text-green-600">1</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 text-sm">Mês 1-2</h4>
+                            <p class="text-xs text-gray-600">Projeto Piloto</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                <span class="font-bold text-blue-600">2</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 text-sm">Mês 3-4</h4>
+                            <p class="text-xs text-gray-600">Capacitação</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                <span class="font-bold text-purple-600">3</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 text-sm">Mês 5-6</h4>
+                            <p class="text-xs text-gray-600">Refinamento</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-orange-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">
+                                <span class="font-bold text-orange-600">4</span>
+                            </div>
+                            <h4 class="font-semibold text-gray-800 text-sm">Mês 7+</h4>
+                            <p class="text-xs text-gray-600">Expansão</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 text-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    <i class="fas fa-handshake text-green-600 mr-2"></i>
+                    Pronto para Implementação
+                </h3>
+                <p class="text-lg text-gray-700">
+                    Framework completo, ferramentas desenvolvidas e documentação pronta para uso
+                </p>
+                <div class="mt-4">
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+                        <i class="fas fa-check-circle mr-1"></i>
+                        100% Funcional
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

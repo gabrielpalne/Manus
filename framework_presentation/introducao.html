@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .icon-circle {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center p-8">
+        <div class="content-card p-12 max-w-5xl w-full">
+            <div class="text-center mb-8">
+                <div class="icon-circle mx-auto mb-6">
+                    <i class="fas fa-robot text-white text-3xl"></i>
+                </div>
+                <h1 class="text-5xl font-bold title-gradient mb-4">
+                    Framework de Consultoria em Transformação Digital com IA
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Metodologia estruturada para implementar soluções de IA com resultados mensuráveis
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-8 mb-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Resultados Mensuráveis</h3>
+                    <p class="text-sm text-gray-600">ROI demonstrável com sistema completo de KPIs</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Ferramentas Práticas</h3>
+                    <p class="text-sm text-gray-600">Templates e dashboards prontos para uso</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Abordagem Holística</h3>
+                    <p class="text-sm text-gray-600">Integra estratégia, tecnologia e pessoas</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 text-center">
+                <p class="text-lg font-medium text-gray-800">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                    Uma solução completa para transformar oportunidades de IA em valor de negócio
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

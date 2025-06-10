@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .kpi-category {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            border-radius: 10px;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center p-8">
+        <div class="content-card p-10 max-w-6xl w-full">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-chart-bar text-green-600 mr-3"></i>
+                    Sistema de Métricas e KPIs
+                </h1>
+                <p class="text-lg text-gray-600">Framework completo com 17 KPIs categorizados para aferição de resultados</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Categorias de KPIs -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-tags text-blue-500 mr-2"></i>
+                        5 Categorias de KPIs
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="kpi-category p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-dollar-sign text-green-600 mr-2"></i>
+                                Financeiros (4 KPIs)
+                            </h3>
+                            <p class="text-sm text-gray-600">ROI, economia de custos, aumento de receita, redução de tempo</p>
+                        </div>
+                        
+                        <div class="kpi-category p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-cogs text-blue-600 mr-2"></i>
+                                Operacionais (4 KPIs)
+                            </h3>
+                            <p class="text-sm text-gray-600">Processos automatizados, volume de transações, precisão, disponibilidade</p>
+                        </div>
+                        
+                        <div class="kpi-category p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-star text-purple-600 mr-2"></i>
+                                Qualidade (4 KPIs)
+                            </h3>
+                            <p class="text-sm text-gray-600">Satisfação do cliente, NPS, taxa de erro, tempo de resolução</p>
+                        </div>
+                        
+                        <div class="kpi-category p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-users text-orange-600 mr-2"></i>
+                                Adoção (4 KPIs)
+                            </h3>
+                            <p class="text-sm text-gray-600">Taxa de adoção, frequência de uso, maturidade, capacitação</p>
+                        </div>
+                        
+                        <div class="kpi-category p-4">
+                            <h3 class="font-semibold text-gray-800 mb-2">
+                                <i class="fas fa-lightbulb text-yellow-600 mr-2"></i>
+                                Inovação (3 KPIs)
+                            </h3>
+                            <p class="text-sm text-gray-600">Novos casos de uso, tempo de implementação, índice de inovação</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exemplo de Dashboard -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-chart-line text-green-500 mr-2"></i>
+                        Exemplo de Evolução
+                    </h2>
+                    
+                    <div class="chart-container p-4">
+                        <div style="height: 300px;">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <div class="bg-green-50 rounded-lg p-3 text-center">
+                            <div class="text-2xl font-bold text-green-600">245%</div>
+                            <div class="text-sm text-gray-600">ROI Atual</div>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-3 text-center">
+                            <div class="text-2xl font-bold text-blue-600">850k</div>
+                            <div class="text-sm text-gray-600">Economia (R$)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">
+                    <i class="fas fa-tools text-gray-600 mr-2"></i>
+                    Ferramentas de Coleta e Análise
+                </h3>
+                
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-center bg-blue-50 rounded-lg p-4">
+                        <i class="fas fa-robot text-blue-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Coleta Automática</h4>
+                        <p class="text-xs text-gray-600">Logs, APIs, sistemas</p>
+                    </div>
+                    
+                    <div class="text-center bg-green-50 rounded-lg p-4">
+                        <i class="fas fa-chart-pie text-green-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Dashboards</h4>
+                        <p class="text-xs text-gray-600">Visualização em tempo real</p>
+                    </div>
+                    
+                    <div class="text-center bg-purple-50 rounded-lg p-4">
+                        <i class="fas fa-bell text-purple-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Alertas</h4>
+                        <p class="text-xs text-gray-600">Notificações automáticas</p>
+                    </div>
+                    
+                    <div class="text-center bg-orange-50 rounded-lg p-4">
+                        <i class="fas fa-file-alt text-orange-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Relatórios</h4>
+                        <p class="text-xs text-gray-600">Análises periódicas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 text-center">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">
+                    <i class="fas fa-target text-green-600 mr-2"></i>
+                    Objetivo: Demonstrar Valor Mensurável
+                </h3>
+                <p class="text-gray-600">
+                    Sistema completo para comprovar ROI e justificar investimentos em IA
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Criar gráfico de ROI
+        const ctx = document.getElementById('roiChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [{
+                    label: 'ROI (%)',
+                    data: [45, 78, 125, 165, 198, 245],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

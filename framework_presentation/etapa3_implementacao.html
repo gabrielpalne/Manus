@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .activity-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+            border-radius: 10px;
+        }
+        .phase-indicator {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex items-center justify-center p-8">
+        <div class="content-card p-10 max-w-6xl w-full">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-code text-purple-600 mr-3"></i>
+                    Etapa 3: Desenvolvimento e Implementação
+                </h1>
+                <p class="text-lg text-gray-600">Construir, testar e implantar soluções de IA</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Fases de Implementação -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-rocket text-purple-500 mr-2"></i>
+                        Fases de Implementação
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="activity-card p-4">
+                            <div class="flex items-center mb-2">
+                                <div class="phase-indicator mr-3">1</div>
+                                <h3 class="font-semibold text-gray-800">Desenvolvimento</h3>
+                            </div>
+                            <ul class="text-sm text-gray-600 ml-12 space-y-1">
+                                <li>• Modelos de IA e algoritmos</li>
+                                <li>• Pipelines de dados</li>
+                                <li>• APIs e interfaces</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card p-4">
+                            <div class="flex items-center mb-2">
+                                <div class="phase-indicator mr-3">2</div>
+                                <h3 class="font-semibold text-gray-800">Testes e Validação</h3>
+                            </div>
+                            <ul class="text-sm text-gray-600 ml-12 space-y-1">
+                                <li>• Testes unitários e integração</li>
+                                <li>• Validação de modelos</li>
+                                <li>• Testes de performance</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card p-4">
+                            <div class="flex items-center mb-2">
+                                <div class="phase-indicator mr-3">3</div>
+                                <h3 class="font-semibold text-gray-800">Implantação</h3>
+                            </div>
+                            <ul class="text-sm text-gray-600 ml-12 space-y-1">
+                                <li>• Rollout faseado</li>
+                                <li>• Monitoramento intensivo</li>
+                                <li>• Suporte dedicado</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-card p-4">
+                            <div class="flex items-center mb-2">
+                                <div class="phase-indicator mr-3">4</div>
+                                <h3 class="font-semibold text-gray-800">Gestão da Mudança</h3>
+                            </div>
+                            <ul class="text-sm text-gray-600 ml-12 space-y-1">
+                                <li>• Treinamento de usuários</li>
+                                <li>• Comunicação e engajamento</li>
+                                <li>• Champions da mudança</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Aspectos Críticos -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                        <i class="fas fa-exclamation-circle text-red-500 mr-2"></i>
+                        Aspectos Críticos
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+                            <h3 class="font-semibold text-red-800 mb-2">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                Segurança e Compliance
+                            </h3>
+                            <p class="text-sm text-red-700">Proteção de dados e conformidade regulatória</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                            <h3 class="font-semibold text-yellow-800 mb-2">
+                                <i class="fas fa-chart-line mr-2"></i>
+                                Performance dos Modelos
+                            </h3>
+                            <p class="text-sm text-yellow-700">Precisão, latência e escalabilidade</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                            <h3 class="font-semibold text-blue-800 mb-2">
+                                <i class="fas fa-plug mr-2"></i>
+                                Integração de Sistemas
+                            </h3>
+                            <p class="text-sm text-blue-700">Compatibilidade com infraestrutura existente</p>
+                        </div>
+                        
+                        <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded">
+                            <h3 class="font-semibold text-green-800 mb-2">
+                                <i class="fas fa-users mr-2"></i>
+                                Adoção pelos Usuários
+                            </h3>
+                            <p class="text-sm text-green-700">Engajamento e capacitação efetiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">
+                    <i class="fas fa-tools text-orange-600 mr-2"></i>
+                    Ferramentas e Tecnologias
+                </h3>
+                
+                <div class="grid grid-cols-5 gap-4">
+                    <div class="text-center bg-gray-50 rounded-lg p-3">
+                        <i class="fab fa-python text-blue-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Python/R</h4>
+                        <p class="text-xs text-gray-600">ML Development</p>
+                    </div>
+                    
+                    <div class="text-center bg-gray-50 rounded-lg p-3">
+                        <i class="fas fa-cloud text-blue-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Cloud Platforms</h4>
+                        <p class="text-xs text-gray-600">AWS/Azure/GCP</p>
+                    </div>
+                    
+                    <div class="text-center bg-gray-50 rounded-lg p-3">
+                        <i class="fas fa-database text-green-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Data Pipeline</h4>
+                        <p class="text-xs text-gray-600">ETL/Streaming</p>
+                    </div>
+                    
+                    <div class="text-center bg-gray-50 rounded-lg p-3">
+                        <i class="fas fa-eye text-purple-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Monitoring</h4>
+                        <p class="text-xs text-gray-600">MLOps Tools</p>
+                    </div>
+                    
+                    <div class="text-center bg-gray-50 rounded-lg p-3">
+                        <i class="fas fa-mobile-alt text-orange-600 text-2xl mb-2"></i>
+                        <h4 class="font-semibold text-gray-800 text-sm">Interfaces</h4>
+                        <p class="text-xs text-gray-600">Web/Mobile</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 grid grid-cols-3 gap-6">
+                <div class="text-center bg-purple-50 rounded-lg p-4">
+                    <i class="fas fa-clock text-purple-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Duração</h3>
+                    <p class="text-sm text-gray-600">12-24 semanas</p>
+                </div>
+                
+                <div class="text-center bg-orange-50 rounded-lg p-4">
+                    <i class="fas fa-users text-orange-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Equipe</h3>
+                    <p class="text-sm text-gray-600">Multidisciplinar</p>
+                </div>
+                
+                <div class="text-center bg-green-50 rounded-lg p-4">
+                    <i class="fas fa-check-double text-green-600 text-2xl mb-2"></i>
+                    <h3 class="font-semibold text-gray-800">Resultado</h3>
+                    <p class="text-sm text-gray-600">Soluções em produção</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

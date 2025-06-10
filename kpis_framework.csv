@@ -1,0 +1,21 @@
+KPI_Categoria,KPI_Nome,Definicao,Unidade,Meta,Frequencia_Coleta,Fonte_Dados,Responsavel
+Financeiro,ROI de IA,Percentual de retorno financeiro gerado pelos investimentos em IA,Percentual,>200% em 24 meses,Mensal,Sistema Financeiro,CFO
+Financeiro,Economia de Custos,Valor monetário economizado através da automação,R$ (milhares),Definida por projeto,Mensal,Sistema de Custos,Gerente de Projeto
+Financeiro,Aumento de Receita,Receita adicional gerada por soluções de IA,R$ (milhares),Definida por projeto,Mensal,Sistema de Vendas,Diretor Comercial
+Financeiro,Redução Tempo Processo,Percentual de redução no tempo de execução,Percentual,>50%,Semanal,Logs de Sistema,Analista de Processos
+Operacional,Processos Automatizados,Quantidade de processos automatizados com IA,Número,Definida no roadmap,Mensal,Sistema de Gestão,Gerente de TI
+Operacional,Volume Transações,Quantidade de transações processadas automaticamente,Número,+20% ao mês,Diária,Banco de Dados,Analista de Dados
+Operacional,Taxa Precisão Modelos,Percentual de acertos dos modelos de IA,Percentual,>95%,Diária,Logs de IA,Cientista de Dados
+Operacional,Disponibilidade Sistemas,Percentual de tempo que sistemas estão operacionais,Percentual,>99.5%,Contínua,Monitoramento,DevOps
+Qualidade,Satisfação Cliente,Índice de satisfação com serviços automatizados,Escala 1-5,>4.5,Mensal,Pesquisa,Gerente de CX
+Qualidade,Net Promoter Score,Índice de recomendação dos serviços,Escala -100 a +100,>50,Trimestral,Pesquisa,Gerente de Marketing
+Qualidade,Taxa de Erro,Percentual de erros em processos automatizados,Percentual,<2%,Diária,Logs de Sistema,Analista de Qualidade
+Qualidade,Tempo Resolução,Tempo médio para resolver problemas,Horas,<4 horas,Por incidente,Sistema de Tickets,Suporte Técnico
+Adoção,Taxa Adoção Usuários,Percentual de usuários que utilizam IA,Percentual,>80%,Mensal,Sistema de Usuários,Gerente de Adoção
+Adoção,Frequência de Uso,Interações por usuário por dia,Número,Definida por solução,Diária,Analytics,Analista de Produto
+Adoção,Maturidade Digital,Pontuação do assessment de maturidade,Escala 1-5,Evolução contínua,Semestral,Assessment,Consultor
+Adoção,Colaboradores Capacitados,Funcionários treinados em IA,Número,100% áreas impactadas,Trimestral,RH,Gerente de RH
+Inovação,Novos Casos de Uso,Novos casos de uso implementados,Número,2 por trimestre,Trimestral,Gestão de Projetos,Gerente de Inovação
+Inovação,Tempo Implementação,Tempo médio para implementar solução,Semanas,<12 semanas,Por projeto,Gestão de Projetos,Gerente de Projeto
+Inovação,Índice Inovação,Receita de produtos inovadores com IA,Percentual,>15%,Anual,Sistema Financeiro,Diretor de Inovação
+
